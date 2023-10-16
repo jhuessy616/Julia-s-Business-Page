@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link href='<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">' type='text/css'>
+<style>
+body {
+  font-family: helvetica, sans-serif;
+  margin: 0 auto;
+  max-width: 600px;
+  background: #232323;
+}
+div {
+  height: 200px;
+  background-size: cover;
+  position: relative;
+  margin: 40px 0 0 0;
+  border-radius: 12px;
+}
+h1 {
+  font-family:'Amatic SC', cursive;
+  text-align: center;
+  font-size: 75px;
+  color: #aaaaaa;
+  margin: 60px 0 0 0;
+}
+h2 {
+  text-align: center;
+  color: #bbbbbb;
+  margin: 0px 0 70px 0;
+}
+p {
+  color: rgba(255,255,255,1);
+  background: black;
+  background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  padding: 10px;
+  line-height: 28px;
+  text-align: justify;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  height: 30px;
+  transition: height .5s;
+  -webkit-transition: height .5s;
+  -moz-transition: height .5s;
+}
+
+small {
+  opacity: 0;
+}
+
+.show-description p {
+  height: 80px;
+}
+
+.show-description small {
+  opacity: 1;
+}
+
+.first{
+  background-image: url("https://dam-assets.vailresorts.com/is/image/vailresorts/20180223_BC_cohen_017_3840x1200?resMode=sharp2&wid=1366&fit=constrain,1&dpr=on,1");
+}
+.second{
+  background-image: url("https://cdn.tankha.com/wp-content/uploads/2020/05/Playa-del-Carmen-Jardines-smiles.jpg?x62812");
+  background-position: 50% 35%;
+}
+.dessert{
+  background-image: url("https://cdn.mos.cms.futurecdn.net/grJ2hzhzdzTXgK4thSvoHD.jpg");
+  background-position:50% 10%;
+}
+.price {
+  float: right;
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    line-height: 40px;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 20px 0 30px 0;
+  }
+  div {
+    margin: 20px 12px 0 12px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  small {
+    font-size: 16px;
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+<h1>Julia's Biz</h1>
+<h2>Outdoor Exploring At It's Finest</h2>
+<div class="first">
+  <p>Private Ski Instruction <span class="price">$1200</span><br />
+  <small>Come learn to ski in the beautiful mountains of Colorado! Or drop your kids off to ski and enjoy the spa and apres menus around town! </small></p>
+</div>
+
+<div class="second">
+ <p>Scuba Lessons <span class="price">$450</span><br />
+  <small>Learn to scuba dive in Riviera Maya, Mexico with some of the most talented divers in the world! Diving by day, tacos at night!</small></p>
+</div>
+  
+<div class="dessert">
+  <p>Hike Vermont <span class="price">$200</span><br />
+  <small>Explore the beauty of Vermont! Afterwards enjoy a beer at one of Vermont's 60+ breweries or a maple cremee at a local farmstand!</small></p>
+</div>
+
+<script>
+  $('div').on('click', function() {
+      $(this).toggleClass('show-description');
+  });
+</script>
+
+</body>
